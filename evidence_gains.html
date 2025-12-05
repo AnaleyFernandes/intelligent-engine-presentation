@@ -27,7 +27,6 @@
             flex-direction: column;
         }
 
-        /* Schematic grid background */
         .slide-container::before {
             content: '';
             position: absolute;
@@ -85,7 +84,6 @@
             justify-content: flex-start;
         }
 
-        /* Re-layout metrics to two columns to reduce vertical height */
         .metrics-container {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -209,7 +207,6 @@
             grid-column: 1 / -1;
         }
 
-        /* New Aircraft Progress Bar Styles */
         .progress-bar-container {
             position: absolute;
             bottom: 60px;
@@ -230,10 +227,9 @@
 
         .aircraft-silhouette {
             position: absolute;
-            /* Positioned at 50% for this slide */
             left: 50%; 
-            transform: translateX(-50%); /* Center the plane on the progress point */
-            font-size: 30px; /* Adjust size */
+            transform: translateX(-50%); 
+            font-size: 30px;
             color: #00D9FF;
             text-shadow: 0 0 10px #00D9FF, 0 0 20px rgba(0, 217, 255, 0.5);
             animation: glowPulse 1.5s ease-in-out infinite;
@@ -365,9 +361,8 @@
         </div>
     </div>
     
-    <!-- Navigation Script (Optional: Add if not already present) -->
     <script>
-        // Define the correct order of the slide files
+
         const slideOrder = [
             "index.html",
             "why_evolve.html",
@@ -381,20 +376,20 @@
             "conclusion.html"
         ];
 
-        // Get the current slide's filename
+
         const currentFileName = window.location.pathname.split("/").pop();
         const currentIndex = slideOrder.indexOf(currentFileName);
 
         document.addEventListener('keydown', function(event) {
-            // Key code for Right Arrow is 39
+
             if (event.keyCode === 39) {
-                // Advance to the next slide
+
                 const nextIndex = currentIndex + 1;
                 if (nextIndex < slideOrder.length) {
                     window.location.href = slideOrder[nextIndex];
                 }
             }
-            // Optional: Add Left Arrow Key (37) for going back
+          
             else if (event.keyCode === 37) {
                 const prevIndex = currentIndex - 1;
                 if (prevIndex >= 0) {
@@ -405,4 +400,5 @@
     </script>
 </body>
 </html>
+
 
