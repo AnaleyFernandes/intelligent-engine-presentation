@@ -27,7 +27,7 @@
             flex-direction: column;
         }
 
-        /* Schematic grid background */
+
         .slide-container::before {
             content: '';
             position: absolute;
@@ -154,7 +154,7 @@
         }
 
         .concept-label {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 700;
             color: #00D9FF;
             margin-bottom: 5px;
@@ -162,7 +162,7 @@
         }
 
         .concept-description {
-            font-size: 12px;
+            font-size: 14px;
             color: #FFFFFF;
             line-height: 1.5;
             opacity: 0.9;
@@ -207,7 +207,7 @@
             object-fit: contain;
         }
 
-        /* New Aircraft Progress Bar Styles */
+
         .progress-bar-container {
             position: absolute;
             bottom: 60px;
@@ -228,10 +228,10 @@
 
         .aircraft-silhouette {
             position: absolute;
-            /* Positioned at 30% for this slide */
+
             left: 30%; 
-            transform: translateX(-50%); /* Center the plane on the progress point */
-            font-size: 30px; /* Adjust size */
+            transform: translateX(-50%);
+            font-size: 30px; 
             color: #00D9FF;
             text-shadow: 0 0 10px #00D9FF, 0 0 20px rgba(0, 217, 255, 0.5);
             animation: glowPulse 1.5s ease-in-out infinite;
@@ -245,7 +245,7 @@
 
         .progress-label {
             position: absolute;
-            /* Positioned at 30% for this slide */
+
             left: 30%; 
             transform: translateX(-50%);
             bottom: -20px;
@@ -301,7 +301,7 @@
 
         .main-message {
             grid-column: 1 / -1;
-            font-size: 12px;
+            font-size: 13px;
             color: #00D9FF;
             margin-bottom: 30px;
             font-weight: 700;
@@ -356,7 +356,7 @@
                         <div class="concept-item">
                             <div class="concept-number">4</div>
                             <div class="concept-text">
-                                <div class="concept-label">CONTINUOUS OPTIMIZATION</div>
+                                <div class="concept-label">CONTINUOUS OPTIMISATION</div>
                                 <div class="concept-description">Real-time performance adjustments based on environmental factors and component degradation to maintain peak efficiency. Adjusts thrust, fuel scheduling, and cooling based on real-time conditions.</div>
                             </div>
                         </div>
@@ -383,7 +383,7 @@
         </div>
     </div>
     <script>
-        // Define the correct order of the slide files
+
         const slideOrder = [
             "index.html",
             "why_evolve.html",
@@ -397,20 +397,20 @@
             "conclusion.html"
         ];
 
-        // Get the current slide's filename
+
         const currentFileName = window.location.pathname.split("/").pop();
         const currentIndex = slideOrder.indexOf(currentFileName);
 
         document.addEventListener('keydown', function(event) {
-            // Key code for Right Arrow is 39
+
             if (event.keyCode === 39) {
-                // Advance to the next slide
+
                 const nextIndex = currentIndex + 1;
                 if (nextIndex < slideOrder.length) {
                     window.location.href = slideOrder[nextIndex];
                 }
             }
-            // Optional: Add Left Arrow Key (37) for going back
+
             else if (event.keyCode === 37) {
                 const prevIndex = currentIndex - 1;
                 if (prevIndex >= 0) {
